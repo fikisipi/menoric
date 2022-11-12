@@ -1,0 +1,39 @@
+directive @auth on FIELD_DEFINITION
+
+type User {
+    id: ID!
+    username: String!
+    messages: [Message!]
+    followers: [User!]
+    following: [User!]
+    bio: String!
+}
+
+type Message {
+    id: ID!
+    user: User!
+    message: String!
+    time: String!
+    likes: [User!]!
+}
+
+type Token {
+    user: User!
+    token: String!
+}
+
+type Mutation {
+    signup(username: String!, email: String!, password: String!): Token!
+    login(username: String!, password: String!): Token!
+    loginToken(token: String!): Token!
+    follow(token: String!, to: ID!): String!
+    unfollow(token: String!, to: ID!): String!
+    newMessage(token: String!, message: String!): Message!
+    setBio(token: String!, bio: String!): String!
+}
+
+type Query {
+    getUser(username: String!): User
+    getTimeline(userId: ID!): [Message!]
+    topMessages: [Message!]
+}
