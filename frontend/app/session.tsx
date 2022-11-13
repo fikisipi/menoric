@@ -1,5 +1,5 @@
 import {createCookieSessionStorage} from "@remix-run/node";
-import {loginToken, User} from "../api"
+import {loginToken, User} from "./api"
 const { getSession: G, commitSession, destroySession } =
     createCookieSessionStorage({
         // a Cookie from `createCookie` or the same CookieOptions to create one

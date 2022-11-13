@@ -15,6 +15,8 @@ import Snackbar from "@mui/material/Snackbar"
 import Alert from "@mui/material/Alert"
 import CircularProgress from "@mui/material/CircularProgress"
 import {ArrowLeftOnRectangleIcon} from "@heroicons/react/20/solid";
+import rootStyle from "../styles/root.out.css"
+import muiStyle from "../styles/mui.css"
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -36,7 +38,8 @@ export const loader: LoaderFunction = async (a) => {
 }
 
 export const links: LinksFunction = () => {
-  return [{ rel: "stylesheet", href: "/tailwind" }]
+  // return []
+  return [{ rel: "stylesheet", href: rootStyle }, {rel: "stylesheet", href: muiStyle}, {rel:"stylesheet", href: "https://rsms.me/inter/inter.css"}]
 }
 
 export default function App() {
@@ -66,7 +69,7 @@ export default function App() {
       <head>
         <Meta />
         <Links />
-        <style>{`:root{color-scheme: dark; } body{color: #fff; background: #121212}`}</style>
+        <style>{`:root{color-scheme: dark; } body{color: #fff; background: #121212; } body,.font-sans{font-family: Inter,ui-sans-serif,Arial;}`}</style>
       </head>
       <body>
       <div className={"sticky top-0 w-full border-b-2 py-2 border-[#333]"}>

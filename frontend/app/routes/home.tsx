@@ -1,7 +1,7 @@
 import {Form, Link, useActionData, useLoaderData} from "@remix-run/react";
 import {ActionFunction, json, LoaderFunction, redirect} from "@remix-run/node";
 import {getSession} from "~/session";
-import {getTimeline, Message, newMessage} from "../../api";
+import {getTimeline, Message, newMessage} from "~/api";
 import {fromNow} from "~/errors";
 
 export const action: ActionFunction = async (a) => {

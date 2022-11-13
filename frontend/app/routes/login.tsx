@@ -1,6 +1,6 @@
 import {Form, useActionData, useLoaderData, useFetchers} from "@remix-run/react";
 import {ActionFunction, json, redirect} from "@remix-run/node";
-import {login} from "../../api";
+import {login} from "~/api";
 import {getSession} from "~/session";
 import {ErrorList} from "~/errors";
 

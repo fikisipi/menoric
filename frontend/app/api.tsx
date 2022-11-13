@@ -6,8 +6,8 @@ import {
     MutationLoginArgs,
     MutationLoginTokenArgs,
     MutationNewMessageArgs, QueryGetTimelineArgs, Query, QueryGetUserArgs, MutationFollowArgs
-} from "./gql/graphql"
-export type {Token, User, Message} from "./gql/graphql"
+} from "../gql/graphql"
+export type {Token, User, Message} from "../gql/graphql"
 
 type DataOrError<T> = {data: T, errors: never} | {data: never, errors: any[]}
 type Fn<Args, Res> = (args: Args) => Promise<DataOrError<Res>>

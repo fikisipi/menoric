@@ -1,6 +1,6 @@
 import {ActionFunction, json, LoaderFunction, redirect} from "@remix-run/node";
 import {Form, useLoaderData} from "@remix-run/react";
-import {follow, getUser, unfollow, User} from "../../api";
+import {follow, getUser, unfollow, User} from "~/api";
 import {Timeline} from "~/routes/home";
 import {getSession} from "~/session";
 

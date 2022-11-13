@@ -1,4 +1,5 @@
 node_modules
+/styles/root.out.css
 
 /.cache
 /build

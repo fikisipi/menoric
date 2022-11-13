@@ -1,5 +1,5 @@
 import {useEffect} from "react";
-import {signup} from "../../api";
+import {signup} from "~/api";
 import {Form, Link, useActionData} from "@remix-run/react";
 // import React from "react"
 
